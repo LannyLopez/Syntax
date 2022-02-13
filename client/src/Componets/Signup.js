@@ -52,7 +52,10 @@ function Signup() {
   return (
     <div className="Signup">
       <form className="container">
-        <div>
+        <div className="form-header">
+          <h1>SIGNUP WITH SYNTAX</h1>
+        </div>
+        <div className="row">
           <label htmlFor="username-signup">GITHUB URL:</label>
           <input type="text" id="username-signup" />
         </div>
@@ -70,7 +73,7 @@ function Signup() {
         </div>
         <div>
           <label htmlFor="password-signup">PASSWORD:</label>
-          <input type="password" id="password-signup" />
+          <input type="text" id="password-signup" />
         </div>
 
         <div className="multiselect">
@@ -92,11 +95,8 @@ function Signup() {
           </div>
         </div>
         <div>
-          <label>
-            {" "}
-            ALL ABOUT YOU
-            <textarea></textarea>
-          </label>
+          <h4> ALL ABOUT YOU</h4>
+          <textarea></textarea>
         </div>
         <div>
           <button className="button" type="submit" onClick={submitHandler}>

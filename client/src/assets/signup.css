@@ -1,21 +1,61 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .Signup {
-  background-color: rgb(255, 255, 255);
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  /* overflow: scroll; */
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 5px;
 }
 
 .container {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
-  border: solid 3px #000000;
-  background-color: rgba(252, 252, 252, 0.8);
-  padding: 10px;
-  height: 75%;
-  width: auto;
+  flex: 1;
+  max-width: 600px;
+  background-color: #eff0f1;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+}
+label {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-  border-radius: 15px;
+input[type="text"] {
+  font-size: 18px;
+  height: 34px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  margin: 5px, 5px, 5px, 5px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.form-header h1 {
+  font-size: 28px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+h4 {
+  text-align: center;
 }
 
 .multiselect {
@@ -29,16 +69,28 @@
 }
 
 .selectBox select {
-  width: 100%;
+  font-size: 18px;
   font-weight: bold;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: white;
+  outline: none;
 }
 
 .overSelect {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  font-size: 18px;
+  height: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #666;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background: white;
+  outline: none;
 }
 
 #checkboxes {
@@ -52,7 +104,7 @@
 }
 
 #checkboxes label:hover {
-  background-color: #1e90ff;
+  background-color: #bbeff3;
 }
 
 .button {
@@ -67,6 +119,14 @@
 }
 
 textarea {
-  min-width: 40%;
-  min-height: 100px;
+  resize: none;
+  height: 100px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
