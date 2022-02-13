@@ -51,9 +51,9 @@ function Signup() {
 
   return (
     <div className="Signup">
-      <form className="signup-form">
+      <form className="container">
         <div>
-          <label htmlFor="username-signup">GITHUB USERNAME:</label>
+          <label htmlFor="username-signup">GITHUB URL:</label>
           <input type="text" id="username-signup" />
         </div>
         <div>

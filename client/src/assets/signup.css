@@ -1,5 +1,14 @@
 .Signup {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 10vh;
+  background-color: rgb(238, 238, 238);
 }
 
 .multiselect {
@@ -26,7 +35,7 @@
 }
 
 #checkboxes {
-  border: 1px #dadada solid;
+  border: 30px rgb(219, 219, 219) solid;
 }
 
 #checkboxes label {
