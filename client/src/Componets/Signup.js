@@ -57,6 +57,14 @@ function Signup() {
           <input type="text" id="username-signup" />
         </div>
         <div>
+          <label htmlFor="email-signup">FIRST NAME:</label>
+          <input type="text" id="email-signup" />
+        </div>
+        <div>
+          <label htmlFor="email-signup">LAST NAME:</label>
+          <input type="text" id="email-signup" />
+        </div>
+        <div>
           <label htmlFor="email-signup">EMAIL:</label>
           <input type="text" id="email-signup" />
         </div>
@@ -64,15 +72,11 @@ function Signup() {
           <label htmlFor="password-signup">PASSWORD:</label>
           <input type="password" id="password-signup" />
         </div>
-        <div>
-          <button type="submit" onClick={submitHandler}>
-            SIGNUP
-          </button>
-        </div>
+
         <div className="multiselect">
           <div className="selectBox" onClick={clickHandler}>
             <select>
-              <option>Select an option</option>
+              <option>Select your languages</option>
             </select>
             <div className="overSelect"></div>
           </div>
@@ -86,6 +90,18 @@ function Signup() {
               return <DropDownOptions value={option} keys={index} />;
             })}
           </div>
+        </div>
+        <div>
+          <label>
+            {" "}
+            ALL ABOUT YOU
+            <textarea></textarea>
+          </label>
+        </div>
+        <div>
+          <button className="button" type="submit" onClick={submitHandler}>
+            SIGN UP
+          </button>
         </div>
       </form>
     </div>
