@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-const jwtExpiration = '15s';
+const jwtExpiration = '10min';
 
 const auth = {
   signToken: function ({ name, _id }) {
