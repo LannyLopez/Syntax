@@ -12,10 +12,10 @@ const PORT = 3001;
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  // context: ({ req }) => {
-  //   const user = auth.authenticateToken(req);
-  //   return { user };
-  // }
+  context: ({ req }) => {
+    const user = auth.authenticateToken(req);
+    return { user };
+  }
 });
 
 await server.start();

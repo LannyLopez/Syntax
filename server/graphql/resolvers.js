@@ -1,69 +1,51 @@
 import db from '../db/index.js';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
 import auth from '../utils/auth.js';
-import { UserInputError } from 'apollo-server-express';
-import validation from '../utils/validation.js';
+
 
 const resolvers = {
   Query: {
-    getProjects: async (parent, args, context) => {
-      const projects = await db.models.Project.find();
-      return projects;
+    projects: async (parent, args, context) => {
+      if (!context.user) throw new Error('Unauthenticated user');
+      return await db.models.User.find();
+
+    },
+
+    users: async (parent, args, context) => {
+      if (!context.user) throw new Error('Unauthenticated user');
+      return await db.models.User.find();
     }
   },
 
   Mutation: {
-    signUp: async (_, { signUpInput: { username, email, password, confirmPassword }}) => {
-      const { valid, errors } = validation(username, email, password, confirmPassword);
-      if(!valid){
-        throw new UserInputError('Errors', { errors });
-      }
 
-      const user = await db.models.User.findOne({ username });
-      if(user) {
-        throw new UserInputError('this username is already taken', {
-          errors: {
-            username: 'This username is taken'
-          }
-        });
-      }
-
-      password = await bcrypt.hash(password, 12);
-
-      const newUser = new db.models.User({
-        email,
-        username,
-        password,
-        createdAt: new Date().toISOString()
-      });
-
-      const res = await newUser.save();
-
-      const token = jwt.sign({
-        id: res.id,
-        email: res.email,
-        username: res.username
-      }, process.env.JWT_SECRET, { expiresIn: '1h'});
-
-      return {
-        ...res._doc,
-        id: res._id,
-        token
-      };
+    newUser: async(parent, args) => {
+      const user = await db.models.User.create(args);
+      
+      return user;
     },
 
-    createProject: async (_, { projectInput: { projectName, description, owner } }, context, info) => {
-    
-      const newProject = new db.models.Project({
-        projectName,
-        description,
-        owner,
-        createdAt: new Date().toISOString()
-      });
+    login: async(parent, args) => {
+      try {
+        const user = await db.models.User.findOne({ email: args.email, password: args.password });
 
-      console.log(newProject);
+        if (!user) throw new Error('Incorrect Email or Password');
+
+        const token = auth.signToken({ _id: user._id, email: user.email });
+        console.log(token);
+
+        return { token, user };
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    createProject: async(parent, args, context) => {
+      if (context.user) {
+        const project = await db.models.Project.create({ ...args, username: context.user.username });
+        return project;
+      };
     }
+
   }
 };
 
