@@ -55,23 +55,23 @@ function Signup() {
         <div className="form-header">
           <h1>SIGNUP WITH SYNTAX</h1>
         </div>
-        <div className="row">
+        <div className="div-margin">
           <label htmlFor="username-signup">GITHUB URL:</label>
-          <input type="text" id="username-signup" />
+          <input type="text" id="username-signup"></input>
         </div>
-        <div>
+        <div className="div-margin">
           <label htmlFor="email-signup">FIRST NAME:</label>
           <input type="text" id="email-signup" />
         </div>
-        <div>
+        <div className="div-margin">
           <label htmlFor="email-signup">LAST NAME:</label>
           <input type="text" id="email-signup" />
         </div>
-        <div>
+        <div className="div-margin">
           <label htmlFor="email-signup">EMAIL:</label>
           <input type="text" id="email-signup" />
         </div>
-        <div>
+        <div className="div-margin">
           <label htmlFor="password-signup">PASSWORD:</label>
           <input type="text" id="password-signup" />
         </div>
@@ -98,7 +98,7 @@ function Signup() {
           <h4> ALL ABOUT YOU</h4>
           <textarea></textarea>
         </div>
-        <div>
+        <div className="div-button">
           <button className="button" type="submit" onClick={submitHandler}>
             SIGN UP
           </button>

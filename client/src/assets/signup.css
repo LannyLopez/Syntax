@@ -12,9 +12,13 @@
   padding: 5px 10px;
   /* overflow: scroll; */
 }
-.row {
+.div-margin {
   display: flex;
   flex-direction: row;
+  margin: 5px 5px 5px 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 99px;
 }
 .input-group {
   flex: 1;
@@ -39,9 +43,10 @@ label {
 input[type="text"] {
   font-size: 18px;
   height: 34px;
+
   /* padding-left: 10px;
   padding-right: 10px; */
-  margin: 5px, 5px, 5px, 5px;
+
   color: rgb(0, 0, 0);
   border: 1px solid #000000;
   border-radius: 10px;
@@ -50,12 +55,14 @@ input[type="text"] {
 }
 
 .form-header h1 {
+  padding: 10px 0 20px 0;
   font-size: 28px;
   text-align: center;
   color: rgb(0, 0, 0);
 }
 h4 {
   text-align: center;
+  padding: 10px 0 10px 0;
 }
 
 .multiselect {
@@ -69,6 +76,8 @@ h4 {
 }
 
 .selectBox select {
+  display: block;
+  margin: 0 90%;
   font-size: 18px;
   font-weight: bold;
   height: 34px;
@@ -82,6 +91,7 @@ h4 {
 }
 
 .overSelect {
+  margin: 0 90%;
   font-size: 18px;
   height: 0px;
   padding-left: 10px;
@@ -94,9 +104,15 @@ h4 {
 }
 
 #checkboxes {
-  border: 5px rgb(219, 219, 219) solid;
-
-  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 5px 5px 5px;
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: white;
+  outline: none;
 }
 
 #checkboxes label {
@@ -108,9 +124,13 @@ h4 {
 }
 
 .button {
+  display: block;
+  margin: 0 50%;
+  height: 40px;
+  width: 50px;
   background-color: #110101;
   border: 0;
-  padding: 1%;
+  text-align: center;
   color: rgb(255, 255, 255);
   font-weight: 300;
   transition: background-color 0.1s;
@@ -118,10 +138,16 @@ h4 {
   border-radius: 5px;
 }
 
+.div-button {
+}
+
 textarea {
+  display: block;
   resize: none;
-  height: 100px;
-  align-items: center;
+  padding: 10px 0 60px 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 500px) {
