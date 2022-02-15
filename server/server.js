@@ -4,9 +4,10 @@ import { ApolloServer } from 'apollo-server-express';
 import { typeDefs, resolvers } from './graphql/index.js';
 import auth from './utils/auth.js';
 import db from './db/index.js';
+import path from 'path';
 
 const app = express();
-const PORT = 5000;
+const PORT = 3001;
 
 const server = new ApolloServer({ 
   typeDefs, 
