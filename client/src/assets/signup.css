@@ -32,7 +32,7 @@
   max-width: 600px;
   background-color: #eff0f1;
   border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
 }
 label {
   color: #000000;
@@ -90,7 +90,11 @@ h4 {
   outline: none;
 }
 
-.overSelect {
+.dropDown {
+  position: relative;
+  left: 99%;
+}
+/* .overSelect {
   margin: 0 90%;
   font-size: 18px;
   height: 0px;
@@ -101,7 +105,7 @@ h4 {
   border-radius: 4px;
   background: white;
   outline: none;
-}
+} */
 
 #checkboxes {
   font-size: 18px;
@@ -125,9 +129,9 @@ h4 {
 
 .button {
   display: block;
-  margin: 0 50%;
+  margin: 0 45%;
   height: 40px;
-  width: 50px;
+  width: 70px;
   background-color: #110101;
   border: 0;
   text-align: center;
@@ -139,6 +143,13 @@ h4 {
 }
 
 .div-button {
+  padding: 10px 20px;
+  background-color: ##eff0f1;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  color: #bcf5e7;
+  cursor: pointer;
 }
 
 textarea {

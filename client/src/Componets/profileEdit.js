@@ -56,6 +56,10 @@ function Signup() {
           <h1>SIGNUP WITH SYNTAX</h1>
         </div>
         <div className="div-margin">
+          <label htmlFor="username-signup">GITHUB URL:</label>
+          <input type="text" id="username-signup"></input>
+        </div>
+        <div className="div-margin">
           <label htmlFor="email-signup">FIRST NAME:</label>
           <input type="text" id="email-signup" />
         </div>
@@ -71,27 +75,17 @@ function Signup() {
           <label htmlFor="password-signup">PASSWORD:</label>
           <input type="text" id="password-signup" />
         </div>
-        <div className="div-margin">
-          <label htmlFor="username-signup">GITHUB:</label>
-          <input type="text" id="username-signup"></input>
-        </div>
 
         <div className="multiselect">
           <div className="selectBox" onClick={clickHandler}>
             <select>
               <option>Select your languages</option>
-              {options.map((option, index) => {
-                // console.log(option);
-                // return;
-                return <DropDownOptions value={option} keys={index} />;
-              })}
             </select>
-
             <div className="overSelect"></div>
           </div>
           <div
             id="checkboxes"
-            className={`${showDropdown ? "dropDown" : "hideDropdown"}`}
+            className={`${showDropdown ? "" : "hideDropdown"}`}
           >
             {options.map((option, index) => {
               // console.log(option);
