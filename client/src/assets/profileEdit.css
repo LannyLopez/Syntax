@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Signup {
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  /* overflow: scroll; */
+}
+.div-margin {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 5px 5px 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 99px;
+}
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 5px;
+}
+
+.container {
+  flex: 1;
+  max-width: 600px;
+  background-color: #eff0f1;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 0, 0);
+}
+label {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  height: 34px;
+
+  /* padding-left: 10px;
+    padding-right: 10px; */
+
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.form-header h1 {
+  padding: 10px 0 20px 0;
+  font-size: 28px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+h4 {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.multiselect {
+  width: 200px;
+}
+.hideDropdown {
+  display: none;
+}
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  display: block;
+  margin: 0 90%;
+  font-size: 18px;
+  font-weight: bold;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.dropDown {
+  position: relative;
+  left: 99%;
+}
+/* .overSelect {
+    margin: 0 90%;
+    font-size: 18px;
+    height: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+  } */
+
+#checkboxes {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 5px 5px 5px;
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #bbeff3;
+}
+
+.button {
+  display: block;
+  margin: 0 45%;
+  height: 40px;
+  width: 70px;
+  background-color: #110101;
+  border: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.div-button {
+  padding: 10px 20px;
+  background-color: #d6d6d6;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  color: #bcf5e7;
+  cursor: pointer;
+}
+
+textarea {
+  display: block;
+  resize: none;
+  padding: 10px 0 60px 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
