@@ -1,52 +1,32 @@
 import db from '../db/index.js';
 import auth from '../utils/auth.js';
 
-
 const resolvers = {
   Query: {
-    projects: async (parent, args, context) => {
+    books: async (parent, args, context) => {
+      console.log(context);
       if (!context.user) throw new Error('Unauthenticated user');
-      return await db.models.User.find();
-
+      return await db.models.Book.find({}).populate('author');
     },
-
-    users: async (parent, args, context) => {
-      if (!context.user) throw new Error('Unauthenticated user');
-      return await db.models.User.find();
-    }
   },
 
   Mutation: {
-
-    newUser: async(parent, args) => {
-      const user = await db.models.User.create(args);
-      
-      return user;
-    },
-
-    login: async(parent, args) => {
+    login: async (parent, args) => {
       try {
-        const user = await db.models.User.findOne({ email: args.email, password: args.password });
+        const author = await db.models.Author.findOne({ name: args.name });
 
-        if (!user) throw new Error('Incorrect Email or Password');
+        if (!author) throw new Error('No author found');
 
-        const token = auth.signToken({ _id: user._id, email: user.email });
+        const token = auth.signToken({ _id: author._id, name: author.name });
         console.log(token);
 
-        return { token, user };
+        return { token, author };
       } catch (error) {
         console.log(error);
       }
-    },
-
-    createProject: async(parent, args, context) => {
-      if (context.user) {
-        const project = await db.models.Project.create({ ...args, username: context.user.username });
-        return project;
-      };
     }
-
   }
+
 };
 
 export default resolvers;
