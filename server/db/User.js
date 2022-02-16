@@ -16,7 +16,6 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    createdAt: Date,
     projects: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Project'
