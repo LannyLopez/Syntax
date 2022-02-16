@@ -5,7 +5,6 @@ import SwipeButtons from "./Componets/SwipeButtons";
 import Signup from "./Componets/Signup";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
@@ -19,6 +18,7 @@ function App() {
           <Route path="/signup">
             <Header />
             <Signup />
+            <Profile />
           </Route>
           <Route path="/">
             <div>placeholder</div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../assets/signup.css";
+import "../assets/profile.css";
 
-function Signup() {
+function Profile() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selected, setSelected] = useState([]);
   const options = [
@@ -50,33 +50,38 @@ function Signup() {
   }
 
   return (
-    <div className="Signup">
+    <div className="Profile">
       <form className="container">
         <div className="form-header">
-          <h1>SIGNUP WITH SYNTAX</h1>
+          <h1>EDIT YOUR PROFILE</h1>
         </div>
         <div className="div-margin">
-          <label htmlFor="email-signup">FIRST NAME:</label>
-          <input type="text" id="email-signup" />
+          <label htmlFor="email-edit">FIRST NAME:</label>
+          <input type="text" id="email-edit">
+            {user.firstName}
+          </input>
         </div>
         <div className="div-margin">
-          <label htmlFor="email-signup">LAST NAME:</label>
-          <input type="text" id="email-signup" />
+          <label htmlFor="email-edit">LAST NAME:</label>
+          <input type="text" id="email-edit">
+            {user.lastName}
+          </input>
         </div>
         <div className="div-margin">
-          <label htmlFor="email-signup">EMAIL:</label>
-          <input type="text" id="email-signup" />
-        </div>
-        <div className="div-margin">
-          <label htmlFor="password-signup">PASSWORD:</label>
-          <input type="text" id="password-signup" />
-        </div>
-        <div className="div-margin">
-          <label htmlFor="username-signup">GITHUB:</label>
-          <input type="text" id="username-signup"></input>
+          <label htmlFor="email-edit">EMAIL:</label>
+          <input type="text" id="email-edit">
+            {user.email}
+          </input>
         </div>
 
-        <div className="multiselect">
+        <div className="div-margin">
+          <label htmlFor="username-edit">GITHUB:</label>
+          <input type="text" id="username-edit">
+            {user.github}
+          </input>
+        </div>
+
+        <div className="multiSelect">
           <div className="selectBox" onClick={clickHandler}>
             <select>
               <option>Select your languages</option>
@@ -86,7 +91,7 @@ function Signup() {
                 return <DropDownOptions value={option} keys={index} />;
               })}
             </select>
-
+            {user.selectBox}
             <div className="overSelect"></div>
           </div>
           <div
@@ -101,12 +106,13 @@ function Signup() {
           </div>
         </div>
         <div>
-          <h4> ALL ABOUT YOU</h4>
+          <h4> UPDATE YOURSELF </h4>
           <textarea></textarea>
+          {user.textarea}
         </div>
         <div className="div-button">
           <button className="button" type="submit" onClick={submitHandler}>
-            SIGN UP
+            FINISHED
           </button>
         </div>
       </form>
@@ -114,4 +120,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Profile;

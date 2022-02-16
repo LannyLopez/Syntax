@@ -3,7 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.Signup {
+.Profile {
   height: 100%;
   background: #ffffff;
   display: flex;
@@ -43,10 +43,6 @@ label {
 input[type="text"] {
   font-size: 18px;
   height: 34px;
-
-  /* padding-left: 10px;
-    padding-right: 10px; */
-
   color: rgb(0, 0, 0);
   border: 1px solid #000000;
   border-radius: 10px;
@@ -65,7 +61,7 @@ h4 {
   padding: 10px 0 10px 0;
 }
 
-.multiselect {
+.multiSelect {
   width: 200px;
 }
 .hideDropdown {
