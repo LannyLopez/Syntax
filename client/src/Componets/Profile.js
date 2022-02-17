@@ -4,6 +4,8 @@ import "../assets/profile.css";
 function Profile() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selected, setSelected] = useState([]);
+  const [user, setUser] = useState({});
+  // get user
   const options = [
     "HTML",
     "CSS",

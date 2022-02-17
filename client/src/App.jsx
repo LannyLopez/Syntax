@@ -3,6 +3,7 @@ import Header from "./Componets/Header";
 import TinderCards from "./Componets/TinderCards";
 import SwipeButtons from "./Componets/SwipeButtons";
 import Signup from "./Componets/Signup";
+import Profile from "./Componets/Profile";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           <Route path="/signup">
             <Header />
             <Signup />
+          </Route>
+          <Route path="/profile">
+            <Header />
             <Profile />
           </Route>
           <Route path="/">
