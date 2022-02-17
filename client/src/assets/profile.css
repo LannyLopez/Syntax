@@ -9,8 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px;
-  /* overflow: scroll; */
+  padding: 50px 10px;
 }
 .div-margin {
   display: flex;

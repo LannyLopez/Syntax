@@ -9,8 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px;
-  /* overflow: scroll; */
+  padding: 50px 10px;
 }
 .div-margin {
   display: flex;
@@ -30,7 +29,7 @@
 .container {
   flex: 1;
   max-width: 600px;
-  background-color: #eff0f1;
+  background-color: #d6d6d6;
   border-radius: 10px;
   border: 3px solid rgb(0, 0, 0);
 }
@@ -94,18 +93,6 @@ h4 {
   position: relative;
   left: 99%;
 }
-/* .overSelect {
-  margin: 0 90%;
-  font-size: 18px;
-  height: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #666;
-  border: 1px solid #d6d6d6;
-  border-radius: 4px;
-  background: white;
-  outline: none;
-} */
 
 #checkboxes {
   font-size: 18px;
@@ -137,7 +124,6 @@ h4 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: 300;
-  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -148,7 +134,6 @@ h4 {
   font-size: 17px;
   border: none;
   border-radius: 5px;
-  color: #bcf5e7;
   cursor: pointer;
 }
 

@@ -53,7 +53,15 @@ function Signup() {
     <div className="Signup">
       <form className="container">
         <div className="form-header">
-          <h1>SIGNUP WITH SYNTAX</h1>
+          <h1>
+            {" "}
+            <img
+              className="header__logo"
+              src="https://www.downloadclipart.net/medium/curly-brackets-png-picture.png"
+            />{" "}
+            <br />
+            SIGNUP WITH SYNTAX
+          </h1>
         </div>
         <div className="div-margin">
           <label htmlFor="email-signup">FIRST NAME:</label>
