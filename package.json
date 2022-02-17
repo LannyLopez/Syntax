@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-chatbox-component": "^0.0.5",
+    "react-router-dom": "^6.2.1"
+  }
+}
