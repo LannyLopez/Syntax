@@ -4,6 +4,7 @@ import TinderCards from "./Componets/TinderCards";
 import SwipeButtons from "./Componets/SwipeButtons";
 import Signup from "./Componets/Signup";
 import Login from "./Componets/Login";
+import halfHeader from "./Componets/halfHeader";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 
@@ -22,6 +23,7 @@ function App() {
             <Signup />
           </Route>
           <Route exact path="/login">
+            <halfHeader /> 
             <Login />
           </Route>
           <Route path="/">
