@@ -11,9 +11,6 @@ const ProjectSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-    },
-    createdAt: {
-        type: String
     }
 });
 
