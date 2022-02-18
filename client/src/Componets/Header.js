@@ -7,18 +7,18 @@ import ForumIcon from '@mui/icons-material/Forum';
 function Header() {
   return (
     <div className='header'>
-        <IconButton>
-            <PersonIcon fontSize='large' className='header__icon' />
-        </IconButton>
+      <IconButton>
+        <PersonIcon fontSize='large' className='header__icon' />
+      </IconButton>
 
-        <img className='header__logo'
+      <img className='header__logo'
         src='https://www.downloadclipart.net/medium/curly-brackets-png-picture.png' />
 
-        <IconButton>
+      <IconButton>
         <ForumIcon fontSize='large' className='header__icon' />
-        </IconButton>
+      </IconButton>
     </div>
-    
+
   )
 }
 
