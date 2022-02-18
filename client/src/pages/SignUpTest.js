@@ -3,25 +3,32 @@ import "../assets/signup.css";
 import { useMutation } from '@apollo/client'
 import { SIGNUP_MUTATION } from '../graphql/mutations'
 
-function SignupTest() {
-    const [values, setValues] = useState({
-        firstName: '',
-        lastName: '',
-        github: '',
-        email: '',
-        password: ''
-    })
+import { useForm } from '../utils/hooks';
 
-    const testChange = (event) => {
-        setValues({ ...values, [event.target.name]: event.target.value})
-    }
-    
-    const [addUser, { loading }] = useMutation(SIGNUP_MUTATION, {
-        update(proxy, result){
-            console.log(result)
-        },
-        variables: values
-    })
+function SignupTest(props) {
+  const [errors, setErrors] = useState({})
+
+  const { testChange, submitHandler, values } = useForm(newAccount, {
+    firstName: '',
+    lastName: '',
+    github: '',
+    email: '',
+    password: ''
+  })
+  //mutation hook got SIGNUP
+  const [addUser, { loading }] = useMutation(SIGNUP_MUTATION, {
+      update(proxy, result){
+          console.log(result)
+      },
+      onError(err){
+        setErrors(err.graphQLErrors[0].extensions.exception.errors)
+      },
+      variables: values
+  })
+  //calls this function so that addUser does not error to 'undefined'
+  function newAccount(){
+    addUser();
+  }
 
   const [showDropdown, setShowDropdown] = useState(false);
   const [selected, setSelected] = useState([]);
@@ -39,15 +46,15 @@ function SignupTest() {
   function clickHandler(event) {
     setShowDropdown(!showDropdown);
   }
-  function submitHandler(event) {
-    event.preventDefault();
-    addUser();
+  // function submitHandler(event) {
+  //   event.preventDefault();
+  //   addUser();
 
-    //  grab user data from form and languages from selected
-    //on creation success, history push to homepage
-    //on creation failure, error message
-    console.log("submit");
-  }
+  //   //  grab user data from form and languages from selected
+  //   //on creation success, history push to homepage
+  //   //on creation failure, error message
+  //   console.log("submit");
+  // }
   function DropDownOptions(props) {
     const isInArray = selected.findIndex((e) => e === props.value);
     function handleChange(event) {
