@@ -116,7 +116,7 @@ h4 {
 
 .button {
   display: block;
-  margin: 0 45%;
+  margin: 0 35%;
   height: 40px;
   width: 70px;
   background-color: #110101;
@@ -129,7 +129,7 @@ h4 {
 }
 
 .div-button {
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: #eff0f1;
   font-size: 17px;
   border: none;
