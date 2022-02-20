@@ -43,7 +43,7 @@ function Signup() {
           <input type="text" id="username-signup"></input>
         </div>
         <MySelect onChange={setSelected} />
-        {/* </div> */}
+
         <div className="div-button">
           <button className="button" type="submit" onClick={submitHandler}>
             SIGN UP
@@ -55,4 +55,3 @@ function Signup() {
 }
 
 export default Signup;
-// render(<App />, document.getElementById("root"));

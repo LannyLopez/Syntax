@@ -58,6 +58,9 @@ input[type="text"] {
 h4 {
   text-align: center;
   padding: 10px 0 10px 0;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .multiSelect {
@@ -89,18 +92,6 @@ h4 {
   position: relative;
   left: 99%;
 }
-/* .overSelect {
-    margin: 0 90%;
-    font-size: 18px;
-    height: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #666;
-    border: 1px solid #d6d6d6;
-    border-radius: 4px;
-    background: white;
-    outline: none;
-  } */
 
 #checkboxes {
   font-size: 18px;
@@ -126,7 +117,7 @@ h4 {
   display: block;
   margin: 0 45%;
   height: 40px;
-  width: 70px;
+  width: 75px;
   background-color: #110101;
   border: 0;
   text-align: center;
