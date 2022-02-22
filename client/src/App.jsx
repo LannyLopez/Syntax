@@ -2,15 +2,15 @@
 import Header from "./Componets/Header";
 import TinderCards from "./Componets/TinderCards";
 import SwipeButtons from "./Componets/SwipeButtons";
-import Signup from "./Componets/Signup";
+// import Signup from "./Componets/Signup";
 import Login from "./Componets/Login";
-import halfHeader from "./Componets/halfHeader";
+// import halfHeader from "./Componets/halfHeader";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 
-import { ApolloProvider, ApolloClient, InMemoryCache,createHttpLink } from '@apollo/client'
-import Login from "./Componets/GoogleSignIn";
-import Logout from "./Componets/GoogleSignOut";
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
+// import Login from "./Componets/GoogleSignIn";
+// import Logout from "./Componets/GoogleSignOut";
 import Test from "./pages/Test.js";
 import SignupTest from "./pages/SignUpTest";
 
@@ -44,9 +44,9 @@ function App() {
               <Test />
             </Route>
             <Route path="/">
-              <h1>hi</h1>
+              <h1>yo</h1>
               <Login />
-              <Logout />
+              {/* <Logout /> */}
             </Route>
           </Switch>
         </Router>

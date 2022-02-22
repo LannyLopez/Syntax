@@ -31,10 +31,12 @@ UserSchema.pre('save', async function() {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds);
     }
+
+    next();
 });
 
 UserSchema.methods.isCorrectPassword = async function(password) {
-    return bcrypt.compare(password, this.password);
+    return await bcrypt.compare(password, this.password);
 };
 
 const User = mongoose.model("User", UserSchema);
