@@ -17,6 +17,7 @@
   font-size: 28px;
   text-align: center;
   color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
 }
 
 img {
@@ -32,8 +33,7 @@ img {
 }
 
 .sButton {
-  display: block;
-  margin: 0 45%;
+  /* margin: 0 45%; */
   height: 40px;
   width: 70px;
   background-color: #110101;
@@ -47,8 +47,7 @@ img {
 }
 
 .lButton {
-  display: block;
-  margin: 0 45%;
+  /* margin: 0 45%; */
   height: 40px;
   width: 70px;
   background-color: #110101;
@@ -63,7 +62,7 @@ img {
 
 .sign-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 10px 35px;
   background-color: #eff0f1;
@@ -72,16 +71,12 @@ img {
   border-radius: 5px;
   cursor: pointer;
 }
-.log-button {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px 20px;
-  background-color: #eff0f1;
-  font-size: 17px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.welcome {
+  padding: 10px 0 20px 0;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
 }
 
 @media only screen and (max-width: 500px) {

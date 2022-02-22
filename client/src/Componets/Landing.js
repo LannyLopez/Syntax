@@ -21,14 +21,18 @@ function Landing() {
             <br />
             SYNTAX
           </h1>
+          <p className="welcome">
+            Welcome to SYNTAX! <br /> Hire, Connect & Collaborate in our world
+            of coding!
+          </p>
         </div>
 
         <div className="sign-button">
           <button className="sButton" type="submit" onClick={submitHandler}>
             SIGN UP
           </button>
-        </div>
-        <div className="log-button">
+          {/* </div> */}
+          {/* <div className="log-button"> */}
           <button className="lButton" type="submit" onClick={submitHandler}>
             LOGIN
           </button>

@@ -37,15 +37,12 @@ label {
   color: #000000;
   font-size: 20px;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
 }
 
 input[type="text"] {
   font-size: 18px;
   height: 34px;
-
-  /* padding-left: 10px;
-  padding-right: 10px; */
-
   color: rgb(0, 0, 0);
   border: 1px solid #000000;
   border-radius: 10px;
@@ -58,6 +55,7 @@ input[type="text"] {
   font-size: 28px;
   text-align: center;
   color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
 }
 h4 {
   text-align: center;
@@ -83,6 +81,7 @@ h4 {
   padding-left: 10px;
   padding-right: 10px;
   color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
   border: 1px solid #d6d6d6;
   border-radius: 10px;
   background: white;
