@@ -9,8 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px;
-  /* overflow: scroll; */
+  padding: 50px 10px;
 }
 .div-margin {
   display: flex;
@@ -30,7 +29,7 @@
 .container {
   flex: 1;
   max-width: 600px;
-  background-color: #eff0f1;
+  background-color: #d6d6d6;
   border-radius: 10px;
   border: 3px solid rgb(0, 0, 0);
 }
@@ -38,15 +37,12 @@ label {
   color: #000000;
   font-size: 20px;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
 }
 
 input[type="text"] {
   font-size: 18px;
   height: 34px;
-
-  /* padding-left: 10px;
-  padding-right: 10px; */
-
   color: rgb(0, 0, 0);
   border: 1px solid #000000;
   border-radius: 10px;
@@ -59,6 +55,7 @@ input[type="text"] {
   font-size: 28px;
   text-align: center;
   color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
 }
 h4 {
   text-align: center;
@@ -84,6 +81,7 @@ h4 {
   padding-left: 10px;
   padding-right: 10px;
   color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
   border: 1px solid #d6d6d6;
   border-radius: 10px;
   background: white;
@@ -94,18 +92,6 @@ h4 {
   position: relative;
   left: 99%;
 }
-/* .overSelect {
-  margin: 0 90%;
-  font-size: 18px;
-  height: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #666;
-  border: 1px solid #d6d6d6;
-  border-radius: 4px;
-  background: white;
-  outline: none;
-} */
 
 #checkboxes {
   font-size: 18px;
@@ -129,7 +115,7 @@ h4 {
 
 .button {
   display: block;
-  margin: 0 45%;
+  margin: 0 35%;
   height: 40px;
   width: 70px;
   background-color: #110101;
@@ -137,18 +123,16 @@ h4 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: 300;
-  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .div-button {
-  padding: 10px 20px;
-  background-color: #d6d6d6;
+  padding: 10px 30px;
+  background-color: #eff0f1;
   font-size: 17px;
   border: none;
   border-radius: 5px;
-  color: #bcf5e7;
   cursor: pointer;
 }
 

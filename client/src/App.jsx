@@ -2,21 +2,24 @@
 import Header from "./Componets/Header";
 import TinderCards from "./Componets/TinderCards";
 import SwipeButtons from "./Componets/SwipeButtons";
-// import Signup from "./Componets/Signup";
-import Login from "./Componets/Login";
-// import halfHeader from "./Componets/halfHeader";
+import Signup from "./Componets/Signup";
+import Profile from "./Componets/Profile";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import Landing from "./Componets/Landing";
 
-
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
-// import Login from "./Componets/GoogleSignIn";
-// import Logout from "./Componets/GoogleSignOut";
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+import Login from "./Componets/GoogleSignIn";
+import Logout from "./Componets/GoogleSignOut";
 import Test from "./pages/Test.js";
 import SignupTest from "./pages/SignUpTest";
 
-
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const client = new ApolloClient({
@@ -25,7 +28,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-
   return (
     <ApolloProvider client={client}>
       <div className="App">
