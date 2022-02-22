@@ -1,5 +1,8 @@
 import db from '../db/index.js';
 import auth from '../utils/auth.js';
+import bcrypt from 'bcrypt';
+import User from '../db/User.js';
+import { AuthenticationError } from 'apollo-server-express';
 
 
 const resolvers = {
@@ -24,20 +27,22 @@ const resolvers = {
       return user;
     },
 
-    login: async(parent, args) => {
-      try {
-        const user = await db.models.User.findOne({ email: args.email, password: args.password });
+    login: async (parent, { email, password }) => {
+      const user = await db.models.User.findOne({ email });
 
-        if (!user) throw new Error('Incorrect Email or Password');
-
-        const token = auth.signToken({ _id: user._id, email: user.email });
-        console.log(token);
-
-        return { token, user };
-      } catch (error) {
-        console.log(error);
+      if (!user) {
+        throw new AuthenticationError('Incorrect Credentials');
       }
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect Credentials');
+      }
+
+      return user;
     },
+
+    logout: (parent, args, context) => context.logout(),
 
     createProject: async(parent, args, context) => {
       if (context.user) {
