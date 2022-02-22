@@ -32,7 +32,7 @@ UserSchema.pre('save', async function() {
         this.password = await bcrypt.hash(this.password, saltRounds);
     }
 
-    next();
+    // next();
 });
 
 UserSchema.methods.isCorrectPassword = async function(password) {

@@ -7,6 +7,7 @@ import db from './db/index.js';
 import path from 'path';
 
 import passport from 'passport';
+import { GraphQLLocalStrategy, buildContext } from 'graphql-passport'
 
 const app = express();
 const PORT = 3001;
@@ -14,10 +15,6 @@ const PORT = 3001;
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  context: ({ req }) => ({
-    getUser: () => req.user,
-    logout: () => req.logout(),
-  }),
 });
 
 // if (process.env.NODE_ENV === 'production'){
@@ -31,8 +28,8 @@ const server = new ApolloServer({
 await server.start();
 
 //passport stuff
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

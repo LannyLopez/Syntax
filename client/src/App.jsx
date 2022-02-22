@@ -7,16 +7,7 @@ import Profile from "./Componets/Profile";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Landing from "./Componets/Landing";
 
-import {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-  createHttpLink,
-} from "@apollo/client";
-import Login from "./Componets/GoogleSignIn";
-import Logout from "./Componets/GoogleSignOut";
-import Test from "./pages/Test.js";
-import SignupTest from "./pages/SignUpTest";
+import { ApolloProvider,  ApolloClient,  InMemoryCache, createHttpLink } from "@apollo/client";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -40,15 +31,10 @@ function App() {
             </Route>
             <Route path="/signup">
               <Header />
-              <SignupTest />
-            </Route>
-            <Route path="/query">
-              <Test />
+              <Signup />
             </Route>
             <Route path="/">
-              <h1>yo</h1>
-              <Login />
-              {/* <Logout /> */}
+              <Landing />
             </Route>
           </Switch>
         </Router>
