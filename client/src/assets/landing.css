@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  flex: 1;
+  text-align: center;
+  max-width: 600px;
+  background-color: #eff0f1;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.form-header h1 {
+  padding: 10px 0 20px 0;
+  font-size: 28px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
+}
+
+img {
+  align-items: center;
+}
+.Landing {
+  height: 100%;
+  padding: 200px 10px;
+  display: flex;
+  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+
+.sButton {
+  /* margin: 0 45%; */
+  height: 40px;
+  width: 70px;
+  background-color: #110101;
+  border: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton {
+  /* margin: 0 45%; */
+  height: 40px;
+  width: 70px;
+  background-color: #110101;
+  border: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sign-button {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px 35px;
+  background-color: #eff0f1;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.welcome {
+  padding: 10px 0 20px 0;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(194, 185, 233);
+}
+
+@media only screen and (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -2,21 +2,24 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
 const UserSchema = new mongoose.Schema({
-    username: {
+    firstName: {
+        type: String
+    },
+    lastName: {
+        type: String
+    },
+    github: {
         type: String,
-        required: true,
         unique: true
     },
     email: {
         type: String,
-        required: true,
         unique: true
     },
     password: {
         type: String,
         required: true
     },
-    createdAt: Date,
     projects: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Project'

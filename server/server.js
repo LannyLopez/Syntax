@@ -12,11 +12,19 @@ const PORT = 3001;
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  context: ({ req }) => {
-    const user = auth.authenticateToken(req);
-    return { user };
-  }
+  // context: ({ req }) => {
+  //   const user = auth.authenticateToken(req);
+  //   return { user };
+  // }
 });
+
+// if (process.env.NODE_ENV === 'production'){
+//   app.use(express.static(path.join(__dirname, '../client/build')));
+// }
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+// });
 
 await server.start();
 
