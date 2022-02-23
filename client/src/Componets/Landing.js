@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/landing.css";
+import {Link} from 'react-router-dom'
 
 function Landing() {
   function submitHandler(event) {
@@ -28,9 +29,11 @@ function Landing() {
         </div>
 
         <div className="sign-button">
-          <button className="sButton" type="submit" onClick={submitHandler}>
+          <Link to="/signup">
+          <button className="sButton" type="button">
             SIGN UP
           </button>
+          </Link>
           {/* </div> */}
           {/* <div className="log-button"> */}
           <button className="lButton" type="submit" onClick={submitHandler}>
