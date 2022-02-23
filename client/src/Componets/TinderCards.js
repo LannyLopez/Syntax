@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import TinderCard from "react-tinder-card"
 import "../assets/TinderCards.css"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 
 function TinderCards() {
     const [people, setPeople] = useState([
         {
-            name: "Elon Musk",
-            url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/musk-weed-1536332069.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*'
-        },
-        {
-            name: "Jeff Besos",
-            url: "http://www.celebrityfunfacts.com/media/Jeff-Bezos-Facts-Biography.jpg"
+            name: '',
+            email: '',
+            github: '',
+            languages: ''
+
         }
     ]);
 
@@ -33,11 +34,13 @@ function TinderCards() {
             onSwipe={(dir) => swiped(dir, person.name)}
             onCardLeftScreen={() => outOfFrame(person.name)}
             >
-                <div 
-                style={{ backgroundImage: `url(${person.url})` }}
-                className='card'
-                >
-                    <h3>{person.name}</h3>
+                <div className='card'>
+                    <h3 id='names'>first last</h3>
+                    <h3 id='email'>
+                    <a href = "mailto: abc@example.com"><EmailIcon />Send Email</a></h3>
+                    <h3 id='github'>
+                        <a href='https://github.com'><GitHubIcon />GitHub</a></h3>
+                    <h3 id='language'>languages</h3>
                 </div>
             </TinderCard>
         ))}
