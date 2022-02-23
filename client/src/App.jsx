@@ -6,6 +6,8 @@ import Signup from "./Componets/Signup";
 import Profile from "./Componets/Profile";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Landing from "./Componets/Landing";
+import Chats from "./Componets/Chats";
+import ChatScreen from "./Componets/Chatscreen";
 
 import { ApolloProvider,  ApolloClient,  InMemoryCache, createHttpLink } from "@apollo/client";
 
@@ -24,6 +26,10 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
+          <Route path='/chat/:person'>
+          <Header backButton="/chat" />
+            <ChatScreen />
+          </Route>
             <Route path="/swipe">
               <Header />
               <TinderCards />
@@ -32,6 +38,10 @@ function App() {
             <Route path="/signup">
               <Header />
               <Signup />
+            </Route>
+            <Route path="/chat">
+            <Header/>
+            <Chats />
             </Route>
             <Route path="/">
               <Landing />

@@ -19,6 +19,14 @@
   justify-content: space-between;
   padding: 0 99px;
 }
+.div-password {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 5px 5px 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 99px;
+}
 .input-group {
   flex: 1;
   display: flex;
@@ -41,6 +49,16 @@ label {
 }
 
 input[type="text"] {
+  font-size: 18px;
+  height: 34px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+input[type="password"] {
   font-size: 18px;
   height: 34px;
   color: rgb(0, 0, 0);
