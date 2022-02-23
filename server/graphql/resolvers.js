@@ -27,7 +27,7 @@ const resolvers = {
       return user;
     },
 
-    login: async (parent, { email, password }) => {
+    login: async (parent, { email, password }, context) => {
       const user = await db.models.User.findOne({ email });
 
       if (!user) {

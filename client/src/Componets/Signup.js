@@ -65,7 +65,7 @@ function Signup(props) {
         </div>
         <div className="div-margin">
           <label htmlFor="password-signup">PASSWORD:</label>
-          <input type="text" id="password-signup" name="password" value={values.password} onChange={testChange}/>
+          <input type="password" id="password-signup" name="password" value={values.password} onChange={testChange}/>
         </div>
         <div className="div-margin">
           <label htmlFor="github-signup">GITHUB:</label>
