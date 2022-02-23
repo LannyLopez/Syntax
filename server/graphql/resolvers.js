@@ -40,16 +40,16 @@ const resolvers = {
       }
 
       return user;
-    },
-
-    logout: (parent, args, context) => context.logout(),
-
-    createProject: async(parent, args, context) => {
-      if (context.user) {
-        const project = await db.models.Project.create({ ...args, username: context.user.username });
-        return project;
-      };
     }
+
+    // logout: (parent, args, context) => context.logout(),
+
+    // createProject: async(parent, args, context) => {
+    //   if (context.user) {
+    //     const project = await db.models.Project.create({ ...args, username: context.user.username });
+    //     return project;
+    //   };
+    // }
 
   }
 };

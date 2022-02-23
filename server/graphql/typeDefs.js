@@ -8,6 +8,7 @@ const typeDefs = gql`
     github: String!
     email: String!
     password: String!
+    profilePic: String
   }
 
   type Project {
@@ -34,10 +35,8 @@ const typeDefs = gql`
   }
 
   type Mutation{
-    signUp(username: String!, email: String!, password: String!): User
     login(email: String!, password: String!): User
-    createProject(projectName: String!, description: String!): Project
-    newUser(firstName: String!, lastName: String!, github: String!, password: String!, email: String!): User
+    newUser(firstName: String!, lastName: String!, github: String!, password: String!, email: String!, profilePic: String!): User
     logout: Boolean
   }
 `;
