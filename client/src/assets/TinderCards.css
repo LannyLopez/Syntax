@@ -1,15 +1,16 @@
 .card {
     position: relative;
-    background-color: #fff;
+    background-color: gray;
     width: 600px;
     padding: 20px;
-    max-width: 85vw;
-    height: 50vw;
-    box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+    max-width: 1108.4px;
+    height: 700px;
+    box-shadow: 0px 18px 20px 0px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     background-size: cover;
     background-position: center;
 }
+
 
 .tinderCards__cardContainer {
     display: flex;
@@ -27,8 +28,52 @@
 }
 
 .card h3 {
-    position: absolute;
-    bottom: 0;
     margin: 10px;
     color: #fff;
+    font-size: xx-large;
 }
+
+.names {
+    position: absolute;
+    top: 0;
+    font-size: 38px;
+}
+
+#email {
+    position: absolute;
+    bottom: 0;
+    font-size: x-large;
+
+}
+
+#github {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: x-large;
+    margin-right: 15px
+}
+
+#language {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    bottom: 70px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: x-large;
+}
+
+.picContainer {
+    max-height: 400px;
+    max-width: 400px;
+    position: relative;
+}
+
+
+#profilePic {
+    border-radius: 50%;
+}
+
+

@@ -14,7 +14,7 @@ h4{
 form{
     display: inline-block;
     align-items: center;
-    height: 270px;
+    height: auto;
     width: 350px;
     margin-bottom: 170px;
 }
@@ -65,4 +65,9 @@ form{
     cursor: pointer;
     display: block;
     text-decoration: none;
+}
+
+#email {
+    bottom: 0;
+    font-size: x-large;
 }
