@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import TinderCard from "react-tinder-card"
 import "../assets/TinderCards.css"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 
 function TinderCards() {
     const [people, setPeople] = useState([
@@ -33,11 +35,12 @@ function TinderCards() {
             onCardLeftScreen={() => outOfFrame(person.name)}
             >
                 <div className='card'>
-                    <h3>first</h3>
-                    <h3>last</h3>
-                    <h3>email</h3>
-                    <h3>github</h3>
-                    <h3>languages</h3>
+                    <h3 id='names'>first last</h3>
+                    <h3 id='email'>
+                    <a href = "mailto: abc@example.com"><EmailIcon />Send Email</a></h3>
+                    <h3 id='github'>
+                        <a href='https://github.com'><GitHubIcon />GitHub</a></h3>
+                    <h3 id='language'>languages</h3>
                 </div>
             </TinderCard>
         ))}

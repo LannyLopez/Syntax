@@ -30,5 +30,36 @@
     margin: 10px;
     color: #fff;
     font-size: xx-large;
-    display: flex;
+}
+
+#names {
+    position: absolute;
+    top: 0;
+    font-size: 38px;
+}
+
+#email {
+    position: absolute;
+    bottom: 0;
+    font-size: x-large;
+
+}
+
+#github {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: x-large;
+    margin-right: 15px
+}
+
+#language {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    bottom: 70px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: x-large;
 }
