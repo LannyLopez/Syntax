@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    background-color: #fff;
+    background-color: gray;
     width: 600px;
     padding: 20px;
     max-width: 85vw;
@@ -27,8 +27,8 @@
 }
 
 .card h3 {
-    position: absolute;
-    bottom: 0;
     margin: 10px;
     color: #fff;
+    font-size: xx-large;
+    display: flex;
 }

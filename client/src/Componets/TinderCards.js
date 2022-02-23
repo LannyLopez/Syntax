@@ -5,12 +5,11 @@ import "../assets/TinderCards.css"
 function TinderCards() {
     const [people, setPeople] = useState([
         {
-            name: "Elon Musk",
-            url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/musk-weed-1536332069.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*'
-        },
-        {
-            name: "Jeff Besos",
-            url: "http://www.celebrityfunfacts.com/media/Jeff-Bezos-Facts-Biography.jpg"
+            name: '',
+            email: '',
+            github: '',
+            languages: ''
+
         }
     ]);
 
@@ -33,11 +32,12 @@ function TinderCards() {
             onSwipe={(dir) => swiped(dir, person.name)}
             onCardLeftScreen={() => outOfFrame(person.name)}
             >
-                <div 
-                style={{ backgroundImage: `url(${person.url})` }}
-                className='card'
-                >
-                    <h3>{person.name}</h3>
+                <div className='card'>
+                    <h3>first</h3>
+                    <h3>last</h3>
+                    <h3>email</h3>
+                    <h3>github</h3>
+                    <h3>languages</h3>
                 </div>
             </TinderCard>
         ))}
