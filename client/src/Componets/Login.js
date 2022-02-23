@@ -4,7 +4,7 @@ import '../assets/Login.css'
 import  { useMutation } from '@apollo/client';
 import { useForm } from '../utils/hooks';
 import { LOGIN_MUTATION } from '../graphql/mutations';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 function Login(props) {
   const [errors, setErrors] = useState({});
@@ -15,19 +15,19 @@ function Login(props) {
     password: ''
   })
 
-  const [loginUser, { loading }] = useMutation(LOGIN_MUTATION, {
+  const [loginUser] = useMutation(LOGIN_MUTATION, {
     update(_, result) {
       console.log(result);
       history.push('/swipe');
     },
     onError(err) {
       console.log(err);
-      setErrors(err);
+      setErrors(errors);
       console.log('hit error');
     },
     variables: values
   });
-
+  
   function loginUserCallback(){
     loginUser();
   };
@@ -38,6 +38,7 @@ function Login(props) {
           <form>
             <div className="text_area">
               <input
+                type="text"
                 id="email"
                 name="email"
                 placeholder='Email'
@@ -45,6 +46,7 @@ function Login(props) {
                 value={values.email}
                 onChange={testChange}
               />
+              
             </div>
             <div className="text_area">
               <input
@@ -64,7 +66,7 @@ function Login(props) {
               onClick={submitHandler}
             />
           </form>
-          <a className="link" href="/Signup">Sign Up</a>
+          <Link to="/signup">Sign Up</Link>
         </div>
       )
 }

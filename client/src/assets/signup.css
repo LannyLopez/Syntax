@@ -3,6 +3,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+form {
+  height: auto;
+}
+
 .Signup {
   height: 100%;
   background: #ffffff;
@@ -41,6 +45,7 @@
   border-radius: 10px;
   border: 3px solid rgb(0, 0, 0);
 }
+
 label {
   color: #000000;
   font-size: 20px;
@@ -169,3 +174,4 @@ textarea {
     align-items: center;
   }
 }
+

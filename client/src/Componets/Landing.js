@@ -3,20 +3,13 @@ import "../assets/landing.css";
 import {Link} from 'react-router-dom'
 
 function Landing() {
-  function submitHandler(event) {
-    event.preventDefault();
-    //  grab user data from form and languages from selected
-    //on creation success, history push to homepage
-    //on creation failure, error message
-    console.log("submit");
-  }
   return (
     <div className="Landing">
       <form className="container">
         <div className="form-header">
           <h1>
             <img
-              className="header__logo"
+              className="header__logo" alt="logo"
               src="https://www.downloadclipart.net/medium/curly-brackets-png-picture.png"
             />{" "}
             <br />
@@ -34,11 +27,11 @@ function Landing() {
             SIGN UP
           </button>
           </Link>
-          {/* </div> */}
-          {/* <div className="log-button"> */}
-          <button className="lButton" type="submit" onClick={submitHandler}>
-            LOGIN
-          </button>
+          <Link to="/login">
+            <button className="lButton" type="button">
+              LOGIN
+            </button>
+          </Link>
         </div>
       </form>
     </div>

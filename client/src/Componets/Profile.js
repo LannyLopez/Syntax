@@ -3,9 +3,9 @@ import { MySelect } from "./MySelect";
 import "../assets/profile.css";
 
 function Profile() {
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false);
   const [selected, setSelected] = useState([]);
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
 
   const submitHandler = () => {
     console.log(selected);
