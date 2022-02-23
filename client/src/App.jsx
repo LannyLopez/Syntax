@@ -6,17 +6,10 @@ import Signup from "./Componets/Signup";
 import Profile from "./Componets/Profile";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Landing from "./Componets/Landing";
+import Chats from "./Componets/Chats";
+import ChatScreen from "./Componets/Chatscreen";
 
-import {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-  createHttpLink,
-} from "@apollo/client";
-import Login from "./Componets/GoogleSignIn";
-import Logout from "./Componets/GoogleSignOut";
-import Test from "./pages/Test.js";
-import SignupTest from "./pages/SignUpTest";
+import { ApolloProvider,  ApolloClient,  InMemoryCache, createHttpLink } from "@apollo/client";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -29,30 +22,34 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/swipe">
-            <Header />
-            <TinderCards />
-            <SwipeButtons />
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Router>
+          <Switch>
+          <Route path='/chat/:person'>
+          <Header backButton="/chat" />
+            <ChatScreen />
           </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/profile">
-            <Header />
-            <Profile />
-          </Route>
-          <Route path="/landing">
-            <Landing />
-          </Route>
-          <Route path="/">
-            <div>placeholder</div>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+            <Route path="/swipe">
+              <Header />
+              <TinderCards />
+              <SwipeButtons />
+            </Route>
+            <Route path="/signup">
+              <Header />
+              <Signup />
+            </Route>
+            <Route path="/chat">
+            <Header/>
+            <Chats />
+            </Route>
+            <Route path="/">
+              <Landing />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </ApolloProvider>
   );
 }
 export default App;

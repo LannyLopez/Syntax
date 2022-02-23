@@ -6,16 +6,15 @@ import auth from './utils/auth.js';
 import db from './db/index.js';
 import path from 'path';
 
+import passport from 'passport';
+import { GraphQLLocalStrategy, buildContext } from 'graphql-passport'
+
 const app = express();
 const PORT = 3001;
 
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  // context: ({ req }) => {
-  //   const user = auth.authenticateToken(req);
-  //   return { user };
-  // }
 });
 
 // if (process.env.NODE_ENV === 'production'){
@@ -27,6 +26,10 @@ const server = new ApolloServer({
 // });
 
 await server.start();
+
+//passport stuff
+// app.use(passport.initialize())
+// app.use(passport.session())
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
