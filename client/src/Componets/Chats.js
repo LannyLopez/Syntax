@@ -5,8 +5,8 @@ function Chats(){
     return(
        <div className='chats'>
            <Chat
-           name="Elon"
-           message="Come work for Tesla please👁👄👁"
+           name="Sally"
+           message="Meow Meow Meow"
            timestamp="55 Minutes ago"
            profilePic="" />
        </div>
