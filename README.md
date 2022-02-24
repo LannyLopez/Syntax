@@ -6,10 +6,6 @@ Syntax is an application that allows developers from all over the world find eac
 
 ![demo](./assets/demo.png)
 
-## Usage
-
-Navigate to the following page to sign up: (heroku URL)
-
 ## Contribution
 
 This app was developed by the following individuals, please contact for any questions and feedback.
